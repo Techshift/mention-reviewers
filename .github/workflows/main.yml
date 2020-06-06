@@ -11,8 +11,6 @@ jobs:
     - name: Extract info
       uses: ./ # Uses an action in the root directory
       id: mention-reviews
-      with:
-        event: "somthing wrong"
     # Use the output from the `mention-reviews` step
     - name: Show mentions
       run: |

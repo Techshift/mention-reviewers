@@ -3,10 +3,6 @@ description: 'This action creates a string that mentions all the reviewers for a
 branding:
   icon: 'users'  
   color: 'blue'
-inputs:
-  event:  # id of input
-    description: 'The github Event.'
-    required: true
 outputs:
   mentions: # id of output
     description: 'A string that mentions all the reviewers.'
