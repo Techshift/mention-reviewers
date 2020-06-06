@@ -1,7 +1,7 @@
-name: 'Get Reviewers'
-description: 'Gets the reviewers for a pull request.'
+name: 'Mention Reviewers'
+description: 'This action creates a string that mentions all the reviewers for a pull request.'
 inputs:
-  github-event:  # id of input
+  event:  # id of input
     description: 'The github Event.'
     required: true
 outputs:
@@ -11,4 +11,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.github-event }}
+    - ${{ inputs.event }}

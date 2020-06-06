@@ -4,7 +4,7 @@ This action creates a string that mentions all the reviewers for a pull request.
 
 ## Inputs
 
-### `github-event`
+### `event`
 
 **Required** The github Event.
 
@@ -16,8 +16,9 @@ A string that mentions all the reviewers.
 
 ## Example usage
 
+```
 name: Get mentioned reviewers 
-uses: ./.github/actions/mention-reviewers
-id: mentioned-reviewers
-  with:
-    github-event: ${{ github.event }}
+uses: Techshift/mention-reviewers@0.1.0
+with:
+  github-event: ${{ github.event }}
+```
