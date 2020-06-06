@@ -1,5 +1,8 @@
 name: 'Mention Reviewers'
 description: 'This action creates a string that mentions all the reviewers for a pull request.'
+branding:
+  icon: 'users'  
+  color: 'blue'
 inputs:
   event:  # id of input
     description: 'The github Event.'
