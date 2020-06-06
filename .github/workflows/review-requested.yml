@@ -14,6 +14,9 @@ jobs:
       uses: ./ # Uses an action in the root directory
       id: mention-reviews
     # Use the output from the `mention-reviews` step
-    - name: Show mentions
-      run: |
-        echo "mention reviewers: ${{ steps.mention.outputs.mentions }}"
+    - name: Mention reviewers
+      uses: actions/github@v1.0.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        args: comment "${{ steps.mention-reviews.outputs.mentions }} your review has been requested ⏳"
