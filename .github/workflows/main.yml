@@ -1,0 +1,19 @@
+name: Main
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: A job to test the action
+    steps:
+    - uses: actions/checkout@v1
+    - name: Extract info
+      uses: ./ # Uses an action in the root directory
+      id: mention-reviews
+      with:
+        event: ${{ github.event }}
+    # Use the output from the `mention-reviews` step
+    - name: Show mentions
+      run: |
+        echo "mention reviewers: ${{ steps.mention.outputs.mentions }}"
