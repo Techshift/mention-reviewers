@@ -2,6 +2,8 @@
 
 This action creates a string that mentions all the reviewers for a pull request.
 
+See and example of this action here: `.github/workflows/review-requested.yml`
+
 ## Outputs
 
 ### `mentions`
